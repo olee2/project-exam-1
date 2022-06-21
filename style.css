@@ -512,12 +512,23 @@ Home Page
 }
 
 .slider {
-  position: relative;
-  min-height: 350px;
+  display: grid;
+  grid-template-columns: repeat(6, 50%);
+  justify-content: space-between;
   overflow: hidden;
   max-width: 992px;
   width: 100%;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .slider {
+    grid-template-columns: repeat(6, 100%);
+  }
+}
+
+.slider .background-grey {
+  margin-inline: 10px;
 }
 
 .slide {
@@ -539,18 +550,8 @@ Home Page
   transform: translate(0%);
 }
 
-.l-container {
-  gap: 37px;
-  display: grid;
-  position: absolute;
-  width: 100%;
-  max-height: 100%;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .s-container {
   display: grid;
-  position: absolute;
   width: 100%;
 }
 
@@ -598,29 +599,6 @@ Home Page
 
 .right-arrow {
   right: 0;
-}
-
-@media only screen and (max-width: 860px) {
-  .slider {
-    min-height: 420px;
-  }
-}
-
-@media only screen and (max-width: 764px) {
-  .slider {
-    min-height: 320px;
-  }
-
-  /* .l-container{
-    display:none;
-    visibility: hidden;
-  }*/
-}
-
-@media only screen and (max-width: 512px) {
-  .slider {
-    min-height: 440px;
-  }
 }
 
 /* Subscribe Section */

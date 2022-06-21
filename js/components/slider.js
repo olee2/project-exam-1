@@ -8,11 +8,11 @@ export const setSlider = () => {
   let counter = 0;
 
   const slider = () => {
-    if (counter === slides.length) {
+    if (counter === slides.length - 1) {
       counter = 0;
     }
     if (counter < 0) {
-      counter = slides.length - 1;
+      counter = slides.length - 2;
     }
     slides.forEach((slide) => {
       slide.style.transform = `translateX(-${counter * 100}%)`;
